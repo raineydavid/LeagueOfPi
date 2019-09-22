@@ -38,8 +38,6 @@ mkdir -p $LOGDIR
 
 cd $BUILDDIR
 
-exit
-
 # set hostname in /etc/hostname (argument 1)
 sudo mv /etc/hostname /etc/hostname.backup
 cat hostname |  sed "s/_HOSTNAME_/${1}/" > hostname.tmp
