@@ -1,3 +1,20 @@
+This build of League of Pi contains the following:
+
+Inkscape		vector graphics
+GIMP			image processing
+Audacity		audio processing
+Mu			python/micropython editor
+Google Blockly 		blockly coding puzzles
+Processing		code-controlled graphics/animation 
+Robocode		java-based robot battle game
+Twine			non-linear story creation
+Vokoscreen		screen recorder (video)
+
+
+The last of these tools (Vokoscreen) is particularly useful 
+for recording issues that you encounter in your code club 
+or coder dojo for emailing or posting online for advice.
+
 
 Instructions for creating a "League Of Pi" laptop build.
 
