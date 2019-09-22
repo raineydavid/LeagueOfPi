@@ -1,6 +1,6 @@
-﻿#!/bin/bash
+#!/usr/bin/env bash
 
-# 2019: removed fixed IP settings for library
+# Version 0.1 22 September, 2019
 
 # command line checks: 
 
@@ -14,28 +14,31 @@ then
     exit 1
 fi
 
-BASEDIR="/home/pi/SMPSCodeClub"
+ZIPDIR="/home/pi/Desktop/GITHUB/LeagueOfPi/TEST"
+
+BASEDIR="/home/pi/LeagueOfPi"
 mkdir -p $BASEDIR
 
-DLDIR="${BASEDIR}/Download"
-mkdir -p $DLDIR
-
-BUILDDIR="${BASEDIR}/Build"
-mkdir -p $BUILDDIR
-
-LOGDIR="${BASEDIR}/Log"
-mkdir -p $LOGDIR
-
-if [ -d /home/pi/Desktop/BUILD ]
+if [ -d ${ZIPDIR}/LeagueOfPi-master ]
 then
-    echo "moving BUILD directory into ${BUILDDIR}"
-    mv /home/pi/Desktop/BUILD $BUILDDIR
+    echo "moving LeagueOfPi-master folder to ${ZIPDIR}/master"
+    mv ${ZIPDIR}/LeagueOfPi-master ${BASEDIR}/master
 else
-    echo "can't find /home/pi/Desktop/BUILD - exiting"
+    echo "can't find ${ZIPDIR}/LeagueOfPi-master - exiting"
     exit 3
 fi
 
+BUILDDIR="${BASEDIR}/master/BUILD"
+PROJDIR="${BASEDIR}/master/Projects"
+DLDIR="${BASEDIR}/master/Downloads"
+LOGDIR="${BASEDIR}/master/Log"
+
+mkdir -p $DLDIR
+mkdir -p $LOGDIR
+
 cd $BUILDDIR
+
+exit
 
 # set hostname in /etc/hostname (argument 1)
 sudo mv /etc/hostname /etc/hostname.backup
@@ -66,10 +69,27 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # install useful software applications
+sudo apt-get install mu -y
 sudo apt-get install inkscape -y
 sudo apt-get install gimp -y
 sudo apt-get install audacity -y
-sudo apt-get install mu -y
+sudo apt-get install vokoscreen -y
+sudo apt-get install vlc -y
+
+
+## download & install Processing3 (32 bit)
+## V3.5.3 Linux 32 bit install - released 03 Feb 2019
+if [ ! -f ${DLDIR}/processing-3.5.3-linux32.tgz ]
+then
+	/usr/bin/wget \
+		-o ${LOGDIR}/processing.log \
+		-O ${DLDIR}/processing-3.5.3-linux32.tgz \
+		http://download.processing.org/processing-3.5.3-linux32.tgz
+fi
+cd $DLDIR
+tar xvf processing-3.5-3-linux32.tgz >> ${LOGDIR}/processing.log
+processing-3.5.3/install.sh >> ${LOGDIR}/processing.log
+
 
 ## download & install Google Blockly Games
 if [ ! -f ${DLDIR}/blockly-games-en.zip ]
@@ -81,20 +101,6 @@ then
 fi
 cd $DLDIR
 unzip blockly-games-en.zip
-
-## download & install Processing3 (32 bit)
-## V3.5.3 Linux 32 bit install - released 03 Feb 2019
-if [ ! -f ${DLDIR}/processing-3.5.3-linux32.tgz ]
-then
-	/usr/bin/wget \
-		-o ${LOGDIR}/processing.log \
-		-O ${DLDIR}/processing-3.5.3-linux32.tgz \
-		http://download.processing.org/processing-3.5.3-linux32.tgz
-
-fi
-cd $DLDIR
-tar xvf processing-3.5-3-linux32.tgz >> ${LOGDIR}/processing.log
-processing-3.5.3/install.sh >> ${LOGDIR}/processing.log
 
 
 ## download & install Robocode

@@ -1,23 +1,20 @@
-This build of League of Pi contains the following:
-
-Inkscape		vector graphics
-GIMP			image processing
-Audacity		audio processing
-Mu			python/micropython editor
-Google Blockly 		blockly coding puzzles
-Processing		code-controlled graphics/animation 
-Robocode		java-based robot battle game
-Twine			non-linear story creation
-Vokoscreen		screen recorder (video)
+This build of League of Pi contains the following added
+software installed into the menu system:
 
 
-The last of these tools (Vokoscreen) is particularly useful 
-for recording issues that you encounter in your code club 
-or coder dojo for emailing or posting online for advice.
+Inkscape	Graphics	vector graphics
+GIMP		Graphics	image processing
+Audacity	Sound & Video	audio processing
+Vokoscreen	Sound & Video	screen recorder (video)
+VLC		Sound & Video	media player
+Mu		Programming	python/micropython editor
+Google Blockly	Programming 	coding puzzles/games
+Processing	Programming	code-controlled graphics/animation 
+Robocode	Programming	java-based autonomous robot battle
+Twine		Programming	non-linear story creation
 
 
 Instructions for creating a "League Of Pi" laptop build.
-
 
 [1] Download the latest Raspbian X86 desktop image:
 
@@ -29,14 +26,36 @@ https://www.raspberrypi.org/downloads/raspberry-pi-desktop/
 https://www.balena.io/etcher/
 
 
-[3] Install the image to your laptop by doing the following:
+[3] Install the image to your laptop:
 
-a. plugging your USB stick into your laptop (powered down)
-b. powering your laptop on and booting it into the USB media 
+a. plug your USB stick into your laptop (powered down)
+b. power your laptop on and boot it into the USB media 
 NOTE: USB boot is a setting you will find in your BIOS
-c. selecting graphical install
-d. accepting all default settings
-e. ignoring complaints about missing licensed components
+c. select graphical install
+d. accept all default settings
+e. ignore complaints about missing licensed components
 
 
-[4] 
+[4] Open a terminal and type "cd /home/pi/Desktop"
+
+
+[5] Download the repository. In the same terminal window, type:
+
+wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
+
+
+[6] Once the download has completed, type "unzip master.zip"
+
+
+[7] Choose a NAME for your laptop and run the build script:
+
+e.g. ./LeagueOfPi-master/BUILD/build.sh ManicMiner
+
+
+Now wait as the build script does the following:
+1. renames your laptop
+2. updates the OS (apt-get update; apt-get upgrade)
+3. adds /media/pi symlink to desktop (for ease of finding USB media) 
+4. installs additional offline goodies (e.g. Inkscape, GIMP...)
+5. adds applications to the menu system
+
