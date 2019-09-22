@@ -16,9 +16,13 @@ Twine		Programming	non-linear story creation
 
 Instructions for creating a "League Of Pi" laptop build.
 
+
 [1] Download the latest Raspbian X86 desktop image:
 
 https://www.raspberrypi.org/downloads/raspberry-pi-desktop/
+
+THIS IS A VERY LARGE FILE (>2GB). WE STRONGLY RECOMMEND THAT 
+YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
 
 
 [2] Burn this onto a USB stick using etcher:
@@ -43,6 +47,9 @@ e. ignore complaints about missing licensed components
 
 wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
 
+THIS COMMAND DOWNLOADS A LARGE FILE (15MB). WE STRONGLY RECOMMEND 
+THAT YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
+
 
 [6] Once the download has completed, type "unzip master.zip"
 
@@ -51,6 +58,8 @@ wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
 
 e.g. ./LeagueOfPi-master/BUILD/build.sh ManicMiner
 
+THIS SCRIPT DOWNLOADS SOME LARGE FILES. WE STRONGLY RECOMMEND 
+THAT YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
 
 Now wait as the build script does the following:
 
@@ -59,9 +68,18 @@ Now wait as the build script does the following:
 3. adds /media/pi symlink to desktop (for ease of finding USB media) 
 4. installs additional offline goodies (e.g. Inkscape, GIMP...)
 5. adds applications to the menu system
+6. installs a Projects folder on the desktop containing offline project materials
 
-NOTE: the terminal may be silent for long periods of time (15-30 mins)
-as some files are being downloaded using wget (Processing, Robocode, 
+NOTES:
+
+1. the script contains very little sanity checking of the downloaded 
+content - if it fails or is incomplete, subsequent commands that 
+presume a successful download will throw up errors. Sanity checking
+of downloads will be added in a future version.
+
+2. the terminal may be silent for long periods of time (many minutes)
+while some files are being downloaded using wget (Processing, Robocode, 
 Google Blockly, Twine). During these "silent" periods you can confirm 
-that the downloads are progressing by looking at the wget logs which 
-have been redirected to the /home/pi/LeagueOfPi/master/Log folder.
+that the downloads are progressing by examining the contents of the 
+wget logs using e.g. 'less' these are being written in the 
+/home/pi/LeagueOfPi/master/Log folder.
