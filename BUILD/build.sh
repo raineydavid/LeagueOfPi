@@ -90,7 +90,7 @@ then
 		http://download.processing.org/processing-3.5.3-linux32.tgz
 fi
 cd $DLDIR
-tar xvf processing-3.5-3-linux32.tgz >> ${LOGDIR}/processing.log
+tar xvf processing-3.5.3-linux32.tgz >> ${LOGDIR}/processing.log
 processing-3.5.3/install.sh >> ${LOGDIR}/processing.log
 
 
@@ -121,21 +121,21 @@ then
 fi
 cd $DLDIR
 java -jar ${DLDIR}/robocode-1.9.3.7-setup.jar
-mv /home/pi/robocode /home/pi/SMPSCodeClub/Download 
+mv /home/pi/robocode ${DLDIR}
 
 
-## download & install Twine 2.0 (32 bit)
-if [ ! -f ${DLDIR}/twine_2.1.3_linux32.zip ]
+## download & install Twine 2.3.3 (32 bit)
+if [ ! -f ${DLDIR}/twine_2.3.3_linux32.zip ]
 then
 	echo "LoP >> downloading Twine..."
 	/usr/bin/wget \
 		-v \
 		-o ${LOGDIR}/twine.log \
-		-O ${DLDIR}/twine_2.1.3_linux32.zip \
-		https://bitbucket.org/klembot/twinejs/downloads/twine_2.1.3_linux32.zip
+		-O ${DLDIR}/twine_2.3.3_linux32.zip \
+		https://github.com/klembot/twinejs/releases/download/2.3.3/twine_2.3.3_linux32.zip
 fi
 cd $DLDIR
-unzip twine_2.1.3_linux32.zip
+unzip twine_2.3.3_linux32.zip
 
 
 # add application icons to /usr/share/pixmaps
