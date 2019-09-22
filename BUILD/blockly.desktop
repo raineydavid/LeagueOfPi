@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Google Blockly
+GenericName=Google Blockly
+Comment=Google Blockly Games & Puzzles
+Exec=chromium /home/pi/SMPSCodeClub/Download/blockly-games/index.html
+Icon=blockly
+Terminal=false
+Categories=Development;IDE;Programming;

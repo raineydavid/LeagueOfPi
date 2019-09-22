@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Robocode
+GenericName=Robocode
+Comment=Robocode
+Exec=/home/pi/SMPSCodeClub/Download/robocode/robocode.sh
+Icon=robocode
+Terminal=false
+Categories=Development;IDE;Programming;

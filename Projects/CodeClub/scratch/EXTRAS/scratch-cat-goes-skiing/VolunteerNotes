@@ -1,0 +1,15 @@
+Challenge 1: right move (if left move ADDS 15 to angle, what orientation for right?)
+Challenge 2: Next Costume / Switch Costume To <random pick 1 to N>
+Challenge 3: Additional Obstacles
+
+NOTE: don't need initialisation once placed.
+NOTE: can still move skier after STOP ALL
+
+Game Speed - Start slow. Get faster as points get higher.
+Make a SPEED variable
+Initialise to 2, reduce to a minimum of 1 when you've reached a score of 10
+[1 + abs(1-score*0.1)]
+
+Stay within black lines
+Parallax (glide towards centre)
+Perspective (get smaller)

@@ -1,0 +1,25 @@
+
+Instructions for creating a "League Of Pi" laptop build.
+
+
+[1] Download the latest Raspbian X86 desktop image:
+
+https://www.raspberrypi.org/downloads/raspberry-pi-desktop/
+
+
+[2] Burn this onto a USB stick using etcher:
+
+https://www.balena.io/etcher/
+
+
+[3] Install the image to your laptop by doing the following:
+
+a. plugging your USB stick into your laptop (powered down)
+b. powering your laptop on and booting it into the USB media 
+NOTE: USB boot is a setting you will find in your BIOS
+c. selecting graphical install
+d. accepting all default settings
+e. ignoring complaints about missing licensed components
+
+
+[4] 
