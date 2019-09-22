@@ -49,6 +49,9 @@ wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
 
 [7] Choose a NAME for your laptop and run the build script:
 
+chmod 777 build.sh......
+change ZIPDIR -> /home/pi/Desktop
+
 e.g. ./LeagueOfPi-master/BUILD/build.sh ManicMiner
 
 

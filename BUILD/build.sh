@@ -14,7 +14,7 @@ then
     exit 1
 fi
 
-ZIPDIR="/home/pi/Desktop/GITHUB/LeagueOfPi/TEST"
+ZIPDIR="/home/pi/Desktop"
 
 BASEDIR="/home/pi/LeagueOfPi"
 mkdir -p $BASEDIR
