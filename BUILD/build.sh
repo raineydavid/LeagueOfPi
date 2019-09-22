@@ -81,7 +81,10 @@ sudo apt-get install vlc -y
 ## V3.5.3 Linux 32 bit install - released 03 Feb 2019
 if [ ! -f ${DLDIR}/processing-3.5.3-linux32.tgz ]
 then
+	echo "downloading Processing..."
+	echo "this may take a while..."
 	/usr/bin/wget \
+		-v \
 		-o ${LOGDIR}/processing.log \
 		-O ${DLDIR}/processing-3.5.3-linux32.tgz \
 		http://download.processing.org/processing-3.5.3-linux32.tgz
@@ -94,7 +97,9 @@ processing-3.5.3/install.sh >> ${LOGDIR}/processing.log
 ## download & install Google Blockly Games
 if [ ! -f ${DLDIR}/blockly-games-en.zip ]
 then
+	echo "downloading Google Blockly games..."
 	/usr/bin/wget \
+		-v \
 		-o ${LOGDIR}/blockly.log \
 		-O ${DLDIR}/blockly-games-en.zip \
 		https://github.com/google/blockly-games/raw/offline/generated/blockly-games-en.zip
@@ -107,7 +112,9 @@ unzip blockly-games-en.zip
 ## TODO - menu item
 if [ ! -f ${DLDIR}/robocode-1.9.3.7-setup.jar ]
 then
+	echo "downloading Robocode..."
 	/usr/bin/wget \
+		-v \
 		-o ${LOGDIR}/robocode.log \
 		-O ${DLDIR}/robocode-1.9.3.7-setup.jar \
 		https://sourceforge.net/projects/robocode/files/robocode/1.9.3.7/robocode-1.9.3.7-setup.jar/download
@@ -120,7 +127,9 @@ mv /home/pi/robocode /home/pi/SMPSCodeClub/Download
 ## download & install Twine 2.0 (32 bit)
 if [ ! -f ${DLDIR}/twine_2.1.3_linux32.zip ]
 then
+	echo "downloading Twine..."
 	/usr/bin/wget \
+		-v \
 		-o ${LOGDIR}/twine.log \
 		-O ${DLDIR}/twine_2.1.3_linux32.zip \
 		https://bitbucket.org/klembot/twinejs/downloads/twine_2.1.3_linux32.zip

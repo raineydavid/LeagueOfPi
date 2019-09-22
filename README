@@ -49,16 +49,19 @@ wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
 
 [7] Choose a NAME for your laptop and run the build script:
 
-chmod 777 build.sh......
-change ZIPDIR -> /home/pi/Desktop
-
 e.g. ./LeagueOfPi-master/BUILD/build.sh ManicMiner
 
 
 Now wait as the build script does the following:
+
 1. renames your laptop
 2. updates the OS (apt-get update; apt-get upgrade)
 3. adds /media/pi symlink to desktop (for ease of finding USB media) 
 4. installs additional offline goodies (e.g. Inkscape, GIMP...)
 5. adds applications to the menu system
 
+NOTE: the terminal may be silent for long periods of time (15-30 mins)
+as some files are being downloaded using wget (Processing, Robocode, 
+Google Blockly, Twine). During these "silent" periods you can confirm 
+that the downloads are progressing by looking at the wget logs which 
+have been redirected to the /home/pi/LeagueOfPi/master/Log folder.
