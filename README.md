@@ -45,7 +45,9 @@ e. ignore complaints about missing licensed components
 
 [5] Download the repository. In the same terminal window, type:
 
+```
 wget https://github.com/SMPSCodeClub/LeagueOfPi/archive/master.zip
+```
 
 THIS COMMAND DOWNLOADS A LARGE FILE (15MB). WE STRONGLY RECOMMEND 
 THAT YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
@@ -56,7 +58,10 @@ THAT YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
 
 [7] Choose a NAME for your laptop and run the build script:
 
-e.g. ./LeagueOfPi-master/BUILD/build.sh ManicMiner
+e.g. 
+```
+./LeagueOfPi-master/BUILD/build.sh ManicMiner
+```
 
 THIS SCRIPT DOWNLOADS SOME LARGE FILES. WE STRONGLY RECOMMEND 
 THAT YOU USE AN ETHERNET CONNECTION FOR SPEED AND RESILIENCE.
