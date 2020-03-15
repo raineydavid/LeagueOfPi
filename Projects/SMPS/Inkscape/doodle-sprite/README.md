@@ -1,9 +1,9 @@
-[doodle-sprite.pdf]
+[doodle-sprite.pdf](doodle-sprite.pdf)
 
 Original workshop guide, written for a satellite kids workshop at Scratch Europe 2019 (Cambridge). 
 This takes kids as far as exporting their sprites to files.
 
-[DoodleSprite_Costumes.pdf]
+[DoodleSprite_Costumes.pdf](DoodleSprite_Costumes.pdf)
 
 A re-write / expansion of the pose creation & export sections of the original, with additional
 instruction added covering the importing of the export files created into a Scratch game.
@@ -12,17 +12,17 @@ NOTE: doodle-sprite.pdf still needs to be edited to remove this content, amend i
 goals and provide a new concluding section to show the finished product 
 (an image of the final character graphic - costume/pose 1).
 
-[doodle.png]
+[doodle.png](doodle.png)
 
 A scanned copy of the original drawing that this guide is based on
 The starting point of doodle-sprite.pdf
 
-[Character.svg]
+[Character.svg](Character.svg)
 
 A vector graphics file containing the final character graphic (costume/pose 1) - importable into Inkscape.
 The starting point of DoodleSprite_Costumes.pdf
 
-[Sprite-Costumes folder]
+[Sprite-Costumes folder](Sprite-Costumes)
 
 PNG copies of all character poses required
 
@@ -30,7 +30,7 @@ Useful emergency replacement material for kids who have put lots of effort into 
 their costumes but have failed somehow in their output files - simply swap these in and get them moving 
 on to the Scratch import part of the task.
 
-[Example_Maze_Game.sb2]
+[Example_Maze_Game.sb2](Example_Maze_Game.sb2)
 
 A fully playable maze game that can be used as a template to replace the main character with the 
 sprite costumes created. Kids can, of course, choose to use their own game for this part of the task. 
